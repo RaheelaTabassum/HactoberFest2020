@@ -1,0 +1,85 @@
+1. Git is a distributed version control system.
+2. Svn is a central control system.
+3. In central control system, all the files are stored in the server's database. In distributed vcs, everybody has a local repository.
+
+
+Commands - 
+$ git --version
+$ git config --global user.name "Sayam kumar"
+$ git config --global user.email "sayamkumar049@gmail.com"
+$ git config --list
+$ git help <verb>
+$ git <verb> --help 
+$ git init //for initialising a repository with git
+$ rm -rf .git //to stop tracking
+$ git status
+$ touch .gitignore //to put all the unwanted files which we do not want to git
+
+
+There are three areas -
+Working Directory - where we put up all the files and codes in the local repository. We need to add and commit them.
+Staging Area - Where we commit our files
+
+
+$ git add -A //adds files to staging area
+$ git reset <filename> //removes files from staging area
+$ git reset // to remove everything or 
+$ git reset *
+$ git commit -m "message"
+$ git log // to check the various commits
+$ git clone <repo link>
+$ git remote -v //info about remote repo
+$ git branch -a //branches
+
+
+After making diff
+$ git diff // to list out all the differences 
+$ git status
+$ git add -A
+
+
+To create a new git repo with previous repo
+$ git init //in the folder create a new repo in GitHub
+$ git add -A
+$ git commit -m "message"
+$ git remote add origin link_to_repo
+$ git push -u origin master
+
+
+To start working with old ones 
+$ git pull origin master
+$ git push origin master
+
+
+Common Overflow -- create a branch for desire feature
+$ git branch choices // to initialise a branch
+$ git checkout choices // to change the branch 
+$ git branch // to check the currently we on branch
+
+
+After commit push branch to remote
+$ git push -u origin choices // to create a separate branch in the repo with the modified changes
+$ git branch -a //check all branches at local as well as remote repo
+
+
+Merge a branch
+$ git checkout master
+$ git pull origin master
+$ git branch --merged
+$ git merge choices
+$ git push origin master
+
+Delete a branch
+$ git branch --merged // to check if everything is merged correctly
+$ git branch -d choices //deleted locally
+$ git branch -a //to check 
+$ git push origin --delete choices
+
+Use Cases (New Feature Example)
+master Branch
+Git checkout
+Git merge
+Merge Conflicts
+Delete Branch
+
+
